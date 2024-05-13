@@ -18,7 +18,7 @@ import application.model.Login;
 import application.repository.LoginRepository;
 
 @RestController
-@RequestMapping("/logins")
+@RequestMapping("/login")
 public class LoginController {
     @Autowired
     private LoginRepository loginRepo;

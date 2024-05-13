@@ -1,0 +1,22 @@
+@baseUrl = https://8080-cabreralucas-apip2-rklgb0e2g13.ws-us110.gitpod.io
+
+###
+GET {{baseUrl}}/login
+
+###
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+    "email" : "algumacoisa@hotmail.com",
+    "senha" : "123456",
+}
+
+###
+PUT {{baseUrl}}/login/1
+Content-Type: application/json
+
+{
+    "email" : "algumacoisa@gmail.com",
+    "senha" : "654321",
+}

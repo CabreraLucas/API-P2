@@ -1,0 +1,24 @@
+@baseUrl = https://8080-cabreralucas-apip2-rklgb0e2g13.ws-us110.gitpod.io
+
+###
+GET {{baseUrl}}/comentarios
+
+###
+POST {{baseUrl}}/comentarios
+Content-Type: application/json
+
+{
+    "titulo" : "Imaginação",
+    "texto" : "Algumas palavras escritas",
+    "usuario" : {"id" : 1}
+}
+
+###
+PUT {{baseUrl}}/comentarios/1
+Content-Type: application/json
+
+{
+    "titulo" : "Imaginação Alterada",
+    "texto" : "Algumas palavras escritas alteradas",
+    "usuario" : {"id" : 1}
+}
