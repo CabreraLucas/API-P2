@@ -23,6 +23,7 @@ public class Comentario {
     @ManyToOne
     @JoinColumn(name = "id_usuario", nullable = false)
     private Usuario usuario;
+    public Object getUsuario;
 
     public Usuario getUsuario() {
         return usuario;
