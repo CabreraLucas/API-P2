@@ -1,4 +1,4 @@
-@baseUrl = https://8080-cabreralucas-apip2-rklgb0e2g13.ws-us110.gitpod.io
+@baseUrl = https://8080-cabreralucas-apip2-lwn0zzjslsw.ws-us114.gitpod.io
 
 ###
 GET {{baseUrl}}/usuarios
@@ -8,9 +8,9 @@ POST {{baseUrl}}/usuarios
 Content-Type: application/json
 
 {
-    "nome" : "Nick do Jogador",
-    "nomeExibicao" : "Apelido do Jogador",
-    "login" : {"id" : 1}
+    "nome" : "Nick do Jogador 3",
+    "nomeExibicao" : "Apelido do Jogador 3",
+    "login" : {"id" : 3}
 }
 
 ###

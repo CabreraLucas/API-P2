@@ -1,4 +1,4 @@
-@baseUrl = https://8080-cabreralucas-apip2-rklgb0e2g13.ws-us110.gitpod.io
+@baseUrl = https://8080-cabreralucas-apip2-lwn0zzjslsw.ws-us114.gitpod.io
 
 ###
 GET {{baseUrl}}/comentarios
@@ -8,17 +8,21 @@ POST {{baseUrl}}/comentarios
 Content-Type: application/json
 
 {
-    "titulo" : "Imaginação",
-    "texto" : "Algumas palavras escritas",
-    "usuario" : {"id" : 1}
+    "titulo" : "Imaginação 3",
+    "texto" : "Algumas palavras escritas 3",
+    "usuario" : {"id" : 3}
 }
 
 ###
-PUT {{baseUrl}}/comentarios/1
+PUT {{baseUrl}}/comentarios/2
 Content-Type: application/json
 
 {
-    "titulo" : "Imaginação Alterada",
+    "titulo" : "Imaginação Alterada 2",
     "texto" : "Algumas palavras escritas alteradas",
-    "usuario" : {"id" : 1}
+    "usuario" : {"id" : 2}
 }
+
+
+###
+DELETE {{baseUrl}}/comentarios/2
