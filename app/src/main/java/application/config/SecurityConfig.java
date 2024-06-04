@@ -14,13 +14,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import jakarta.servlet.Filter;
-
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
     @Autowired
-    private Filter securityFilter;
+    private SecurityFilter securityFilter;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
@@ -29,10 +27,10 @@ public class SecurityConfig {
             .sessionManagement()
             .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             .and().authorizeHttpRequests()
-            .requestMatchers(HttpMethod.POST, "/auth").permitAll()  
-            .requestMatchers(HttpMethod.GET, "/swagger-ui/*").permitAll()
-            .requestMatchers(HttpMethod.GET, "/v3/api-docs/**").permitAll()
-            .anyRequest().authenticated()
+            // .requestMatchers(HttpMethod.POST, "/auth").permitAll()  
+            // .requestMatchers(HttpMethod.GET, "/swagger-ui/*").permitAll()
+            // .requestMatchers(HttpMethod.GET, "/v3/api-docs/**").permitAll()
+            .anyRequest().permitAll() //authenticated()
             .and().addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)       
             .build();
     }

@@ -22,12 +22,7 @@ import application.repository.LoginRepository;
 public class LoginController {
     @Autowired
     private LoginRepository loginRepo;
-
-    @GetMapping
-    public Iterable<Login> getAll(){
-        return loginRepo.findAll();
-    }
-
+    
     @GetMapping("/{id}")
     public Login getOne(@PathVariable long id){
         Optional<Login> result = loginRepo.findById(id);
@@ -36,12 +31,17 @@ public class LoginController {
         }
         return result.get();
     }
-
+    
     @PostMapping
     private Login post(@RequestBody Login login){
         return loginRepo.save(login);
     }
-
+    
+    @GetMapping
+    public Iterable<Login> getAll(){
+        return loginRepo.findAll();
+    }
+    
     @PutMapping("/{id}")
     private Login put(@RequestBody Login login, @PathVariable long id){
         Optional<Login> result = loginRepo.findById(id);
