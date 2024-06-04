@@ -1,0 +1,12 @@
+@baseUrl = https://8080-cabreralucas-apip2-wqnhqnlnrj7.ws-us114.gitpod.io
+
+###
+POST {{baseUrl}}/auth
+Content-Type: application/json
+
+{
+    "email": "Lucas",
+    "senha": "123456"
+}
+
+//docker exec -it mysql mysql -uroot -p
